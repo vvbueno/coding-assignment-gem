@@ -37,9 +37,9 @@ You are building a small user management app
   transitions between them.
   * Modify the AppComponent to make it able to support routing (Tip: investigate router-outlet). Create a separate component for displaying the users if necessary
   * In the list user screen, include an "Add user" to add a new user to the list
-  * On each user row, include a "Delete user" button, and a "Edit user" button (this edit button takes you to the edit screen)
+  * On each user row, an "Edit user" button (this edit button takes you to the edit screen)
   * In the edit screen include a form to update any property from the user (for example, the first name and last name)
-* Use Ngrx state management to handle data interaction (for adding, removing and editing users).
+* Use Ngrx state management to handle data interaction (for adding and editing users).
   * Make use of actions, selectors and effects and update the state using a reducer.
   * A basic setup for this is already present in the code, it's working for getting a list of users and displaying it in the main App component. You can use it to set up the rest of the state interactions
   * If possible handle errors! The fake backend has a 10% chance of throwing an error when getting the list of users. In this case displaying an error message when this happens is enough.
