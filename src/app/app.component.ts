@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {User} from './interface/user.interface';
 import {Store} from '@ngrx/store';
 import {UserExampleActionOne} from './store/users/users.actions';
+import {getUsers} from './store/users/users.selector';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +12,10 @@ import {UserExampleActionOne} from './store/users/users.actions';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  users$: Observable<User[]> = this.userService.getUsers();
+  users$: Observable<User[]> = this.store.select(getUsers);
   constructor(
     private userService: UserService,
     private store: Store
   ) {
-    // this.store.dispatch(new UserExampleActionOne());
-    this.users$.subscribe((users) => {
-      console.log(users);
-    });
   }
 }
