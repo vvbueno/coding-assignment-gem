@@ -12,14 +12,6 @@ function randomDelay() {
   return Math.random() * 1000;
 }
 
-// meta function to remove the password property from the object
-function metaRemovePasswordFromUserObject(user: User | undefined): User | undefined {
-  if(user) {
-    return (({ password, ...o }) => o)(user);
-  }
-  return user;
-}
-
 const CLIENT_ID: string = 'ae0bcc11-7fbc-4804-b33b-8d6308f83121';
 
 @Injectable()
@@ -34,7 +26,6 @@ export class UserService {
       firstName: 'Mark',
       profilePicture: 'mynormaluser@mail.com-ae0bcc11-7fbc-4804-b33b-8d6308f83121.jpeg',
       roles: ['user'],
-      password: 'mysecretpassword123'
     },
     {
       username: 'myadminuser@mail.com-ae0bcc11-7fbc-4804-b33b-8d6308f83121',
@@ -44,14 +35,11 @@ export class UserService {
       firstName: 'John',
       profilePicture: 'myadminuser@mail.com@mail.com-ae0bcc11-7fbc-4804-b33b-8d6308f83121.jpeg',
       roles: ['admin','user'],
-      password: 'mysecretpassword123'
     }
   ]
 
   private getUserByUsername = (username: string) => {
     return this.users.find(user => user.username === username);
-    /*const user = this.users.find(user => user.username === username);
-    return metaRemovePasswordFromUserObject(user);*/
   }
 
   getUsers() {

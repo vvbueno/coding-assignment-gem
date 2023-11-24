@@ -1,10 +1,9 @@
-/*
 import {Action} from '@ngrx/store';
 
 // Ignore or remove example actions
 export enum UserActionTypes {
-  USER_EXAMPLE_ACTION_ONE = 'UserActionTypes.USER_EXAMPLE_ACTION',
-  USER_EXAMPLE_ACTION_TWO = 'UserActionTypes.USER_EXAMPLE_ACTION',
+  USER_EXAMPLE_ACTION_ONE = 'UserActionTypes.USER_EXAMPLE_ACTION_ONE',
+  USER_EXAMPLE_ACTION_TWO = 'UserActionTypes.USER_EXAMPLE_ACTION_TWO',
 }
 
 export class UserExampleActionOne implements Action {
@@ -15,4 +14,3 @@ export class UserExampleActionTwo implements Action {
 }
 
 export type UsersActions = UserExampleActionOne | UserExampleActionTwo;
-*/
