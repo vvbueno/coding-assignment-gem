@@ -43,6 +43,14 @@ export class UserService {
   }
 
   getUsers() {
+    // Generate a random number between 0 and 1
+    const randomValue = Math.random();
+
+    // Check if the random value is less than 0.1 (10% chance)
+    if (randomValue < 0.1) {
+      // Throw an error with a custom message
+      return throwError(() => new Error('An error occurred getting the users'));
+    }
     return of(this.users.map( u => u)).pipe(delay(randomDelay()));
   }
 
