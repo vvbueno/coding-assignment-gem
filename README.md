@@ -35,6 +35,7 @@ You are building a small user management app
 
 * The app should have two screens: the users list screen and the edit (an individual user) screen. Please use the Angular router to manage the
   transitions between them.
+  * Modify the AppComponent to make it able to support routing (Tip: investigate router-outlet). Create a separate component for displaying the users if necessary
   * In the list user screen, include an "Add user" to add a new user to the list
   * On each user row, include a "Delete user" button, and a "Edit user" button (this edit button takes you to the edit screen)
   * In the edit screen include a form to update any property from the user (for example, the first name and last name)
