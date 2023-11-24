@@ -7,6 +7,8 @@ After the assignment, we can look at the app together, talk about the decisions 
 
 ## Getting started
 
+Don't clone the repo! [Download it as a ZIP](https://github.com/vvbueno/coding-assignment-gem/archive/refs/heads/master.zip) and submit your solution it by email to `henry@gemvision.io`
+
 This project was generated with Angular CLI version `16.2.12`
 
 Npm version `8.19.3`
