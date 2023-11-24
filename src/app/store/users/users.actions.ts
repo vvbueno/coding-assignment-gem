@@ -1,16 +1,26 @@
 import {Action} from '@ngrx/store';
+import {User} from '../../interface/user.interface';
 
 // Ignore or remove example actions
 export enum UserActionTypes {
-  USER_EXAMPLE_ACTION_ONE = 'UserActionTypes.USER_EXAMPLE_ACTION_ONE',
-  USER_EXAMPLE_ACTION_TWO = 'UserActionTypes.USER_EXAMPLE_ACTION_TWO',
+  GET_USERS = 'UserActionTypes.GET_USERS',
+  GET_USERS_DONE = 'UserActionTypes.GET_USERS_DONE',
+  GET_USERS_FAILED = 'UserActionTypes.GET_USERS_FAILED',
 }
 
-export class UserExampleActionOne implements Action {
-  readonly type = UserActionTypes.USER_EXAMPLE_ACTION_ONE;
+export class GetUsers implements Action {
+  readonly type = UserActionTypes.GET_USERS;
 }
-export class UserExampleActionTwo implements Action {
-  readonly type = UserActionTypes.USER_EXAMPLE_ACTION_TWO;
+export class GetUsersDone implements Action {
+  readonly type = UserActionTypes.GET_USERS_DONE;
+  constructor(public payload: { users: User[] }) {
+  }
 }
 
-export type UsersActions = UserExampleActionOne | UserExampleActionTwo;
+export class GetUsersFailed implements Action {
+  readonly type = UserActionTypes.GET_USERS_FAILED;
+  constructor(public payload: { error: string }) {
+  }
+}
+
+export type UsersActions = GetUsers | GetUsersDone | GetUsersFailed;

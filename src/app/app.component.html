@@ -2,6 +2,6 @@
 
 <ul *ngIf="(users$ |async) as users">
   <li *ngFor="let u of users">
-    User: {{u.firstName}}, {{u.email}}
+    User: {{u.firstName}}, {{u.username}}, {{u.email}}
   </li>
 </ul>

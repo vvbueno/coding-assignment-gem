@@ -3,7 +3,7 @@ import {UserService} from './service/user.service';
 import {Observable} from 'rxjs';
 import {User} from './interface/user.interface';
 import {Store} from '@ngrx/store';
-import {UserExampleActionOne} from './store/users/users.actions';
+import {GetUsers} from './store/users/users.actions';
 import {getUsers} from './store/users/users.selector';
 
 @Component({
@@ -17,5 +17,6 @@ export class AppComponent {
     private userService: UserService,
     private store: Store
   ) {
+    this.store.dispatch(new GetUsers());
   }
 }
